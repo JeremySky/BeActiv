@@ -19,9 +19,6 @@ struct HomeView: View {
             }
             .padding(.horizontal)
         }
-        .onAppear {
-            manager.fetchTodaySteps()
-        }
     }
 }
 
