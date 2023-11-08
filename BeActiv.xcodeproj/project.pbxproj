@@ -11,6 +11,10 @@
 		621DDF9C2AFBEC2C0033DECE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DDF9B2AFBEC2C0033DECE /* ContentView.swift */; };
 		621DDF9E2AFBEC2D0033DECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 621DDF9D2AFBEC2D0033DECE /* Assets.xcassets */; };
 		621DDFA12AFBEC2D0033DECE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 621DDFA02AFBEC2D0033DECE /* Preview Assets.xcassets */; };
+		621DDFA82AFBECFF0033DECE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DDFA72AFBECFF0033DECE /* MainTabView.swift */; };
+		621DDFAA2AFBED390033DECE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DDFA92AFBED390033DECE /* HomeView.swift */; };
+		621DDFAC2AFBEEB40033DECE /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DDFAB2AFBEEB40033DECE /* ActivityCard.swift */; };
+		621DDFAE2AFBF0CE0033DECE /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DDFAD2AFBF0CE0033DECE /* HealthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		621DDF9B2AFBEC2C0033DECE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		621DDF9D2AFBEC2D0033DECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		621DDFA02AFBEC2D0033DECE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		621DDFA72AFBECFF0033DECE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		621DDFA92AFBED390033DECE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		621DDFAB2AFBEEB40033DECE /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		621DDFAD2AFBF0CE0033DECE /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		621DDFAF2AFBF28E0033DECE /* BeActiv.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeActiv.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +60,15 @@
 		621DDF982AFBEC2C0033DECE /* BeActiv */ = {
 			isa = PBXGroup;
 			children = (
+				621DDFAF2AFBF28E0033DECE /* BeActiv.entitlements */,
 				621DDF992AFBEC2C0033DECE /* BeActivApp.swift */,
+				621DDFA72AFBECFF0033DECE /* MainTabView.swift */,
+				621DDFA92AFBED390033DECE /* HomeView.swift */,
 				621DDF9B2AFBEC2C0033DECE /* ContentView.swift */,
 				621DDF9D2AFBEC2D0033DECE /* Assets.xcassets */,
 				621DDF9F2AFBEC2D0033DECE /* Preview Content */,
+				621DDFAB2AFBEEB40033DECE /* ActivityCard.swift */,
+				621DDFAD2AFBF0CE0033DECE /* HealthManager.swift */,
 			);
 			path = BeActiv;
 			sourceTree = "<group>";
@@ -138,7 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				621DDF9C2AFBEC2C0033DECE /* ContentView.swift in Sources */,
+				621DDFAE2AFBF0CE0033DECE /* HealthManager.swift in Sources */,
+				621DDFAA2AFBED390033DECE /* HomeView.swift in Sources */,
+				621DDFA82AFBECFF0033DECE /* MainTabView.swift in Sources */,
 				621DDF9A2AFBEC2C0033DECE /* BeActivApp.swift in Sources */,
+				621DDFAC2AFBEEB40033DECE /* ActivityCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,11 +287,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BeActiv/BeActiv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeActiv/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access to enjoy all the features of our application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,11 +317,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BeActiv/BeActiv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeActiv/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access to enjoy all the features of our application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

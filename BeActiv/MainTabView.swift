@@ -7,14 +7,28 @@
 
 import SwiftUI
 
-struct TabView: View {
+struct MainTabView: View {
+    @EnvironmentObject var manager: HealthManager
     @State var selectedTab = "Home"
     
     var body: some View {
-        TabView
+        TabView(selection: $selectedTab) {
+            HomeView()
+                .tag("Home")
+                .tabItem {
+                    Image(systemName: "house")
+                }
+                .environmentObject(manager)
+            
+            ContentView()
+                .tag("Content")
+                .tabItem {
+                    Image(systemName: "person")
+                }
+        }
     }
 }
 
 #Preview {
-    TabView()
+    MainTabView()
 }
