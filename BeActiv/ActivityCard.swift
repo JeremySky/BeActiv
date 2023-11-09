@@ -12,11 +12,12 @@ struct Activity {
     let title: String
     let subtitle: String
     let image: String
+    let tintColor: Color
     let amount: String
 }
 
 extension Activity {
-    static var test = Activity(id: 0, title: "Daily steps", subtitle: "Goal: 10,000", image: "figure.walk", amount: "5,677")
+    static var test = Activity(id: 0, title: "Daily steps", subtitle: "Goal: 10,000", image: "figure.walk", tintColor: .green, amount: "5,677")
 }
 
 struct ActivityCard: View {
@@ -41,11 +42,13 @@ struct ActivityCard: View {
                     Spacer()
                     
                     Image(systemName: activity.image)
-                        .foregroundColor(.green)
+                        .foregroundColor(activity.tintColor)
                 }
                 
                 Text(activity.amount)
                     .font(.system(size: 24))
+                    .minimumScaleFactor(0.6)
+                    .padding()
             }
             .padding()
         }
